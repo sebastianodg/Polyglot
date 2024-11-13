@@ -3,10 +3,10 @@
 /// <summary>
 /// Classe rappresentante una voce di traduzione
 /// </summary>
-public class PgtEntry
+public class PgtTranslationEntry
 {
 	/// <summary>
-	/// Restituisce o imposta l'identificativo univoco della voce tradotta
+	/// Restituisce o imposta l'identificativo univoco della voce di traduzione
 	/// </summary>
 	public String EntryId { get; set; }
 
@@ -16,14 +16,14 @@ public class PgtEntry
 	public String Text { get; set; }
 
 	/// <summary>
-	/// Restituisce o imposta il flag che indica se la traduzione è completa (true) o va terminata (false)
+	/// Restituisce o imposta il flag che indica se la voce di traduzione è completa (true) o va terminata (false)
 	/// </summary>
 	public Boolean Completed { get; set; }
 
 	/// <summary>
 	/// Costruttore
 	/// </summary>
-	public PgtEntry()
+	public PgtTranslationEntry()
 	{
 		this.EntryId = String.Empty;
 		this.Text = String.Empty;

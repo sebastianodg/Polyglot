@@ -1,9 +1,9 @@
-﻿namespace Polyglot.Lib.Abstractions;
+﻿namespace Polyglot.Lib.Archive.Abstractions;
 
 /// <summary>
 /// Interfaccia che descrive il comportamento degli oggetti che si occupaneo della persistenza degli archivi delle traduzioni
 /// </summary>
-internal interface IPgtArchive
+public interface IPgtArchive
 {
 	/// <summary>
 	/// Restituisce il percorso completo dell'archivio

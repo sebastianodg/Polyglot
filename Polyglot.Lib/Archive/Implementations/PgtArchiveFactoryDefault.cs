@@ -1,12 +1,12 @@
-﻿using Polyglot.Lib.Abstractions;
+﻿using Polyglot.Lib.Archive.Abstractions;
 using Polyglot.Lib.Types;
 
-namespace Polyglot.Lib.Implementations;
+namespace Polyglot.Lib.Archive.Implementations;
 
 /// <summary>
 /// Oggetto factory concreto per la creazione dei gestori degli archivi con implementazione di default
 /// </summary>
-internal class PgtArchiveFactoryDefault : IPgtArchiveFactory
+public class PgtArchiveFactoryDefault : IPgtArchiveFactory
 {
 	public IPgtArchive Get(PgtArchiveType archiveType, String version, String path)
 	{

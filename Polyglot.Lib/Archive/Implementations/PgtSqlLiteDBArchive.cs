@@ -1,11 +1,11 @@
-﻿using Polyglot.Lib.Abstractions;
+﻿using Polyglot.Lib.Archive.Abstractions;
 
-namespace Polyglot.Lib.Implementations;
+namespace Polyglot.Lib.Archive.Implementations;
 
 /// <summary>
 /// Oggetto che si occupa della gestione degli archivi di traduzione memorizzati in un DB SqlLite
 /// </summary>
-internal class PgtSqlLiteDBArchive : IPgtArchive
+public class PgtSqlLiteDBArchive : IPgtArchive
 {
 	private String _path;
 

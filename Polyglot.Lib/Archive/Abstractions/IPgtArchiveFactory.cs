@@ -1,11 +1,11 @@
 ﻿using Polyglot.Lib.Types;
 
-namespace Polyglot.Lib.Abstractions;
+namespace Polyglot.Lib.Archive.Abstractions;
 
 /// <summary>
 /// Interfaccai che definisce il comportamento degli oggetti factory per la creazione degli archivi delle traduzioni
 /// </summary>
-internal interface IPgtArchiveFactory
+public interface IPgtArchiveFactory
 {
 	/// <summary>
 	/// Restituisce l'oggetto concreato per la gestione dell'archivio delle traduzioni

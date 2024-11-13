@@ -3,7 +3,7 @@
 /// <summary>
 /// Enumerazione dei tipi di archivio gestiti
 /// </summary>
-internal enum PgtArchiveType
+public enum PgtArchiveType
 {
 	Unknown,
 	SqlLiteDB,
