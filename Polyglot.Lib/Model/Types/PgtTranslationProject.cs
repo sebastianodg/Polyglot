@@ -1,17 +1,17 @@
 ﻿namespace Polyglot.Lib.Model.Types;
 
 /// <summary>
-/// Classe rappresentante un set di traduzioni
+/// Classe rappresentante un progetto di traduzione
 /// </summary>
-public class PgtTranslationsSet
+public class PgtTranslationProject
 {
 	/// <summary>
-	/// Restituisce o imposta il nome del set di traduzioni
+	/// Restituisce o imposta il nome del progetto di traduzioni
 	/// </summary>
 	public String Name { get; set; }
 
 	/// <summary>
-	/// Restituisce o imposta la descrizione associata al set di traduzioni
+	/// Restituisce o imposta la descrizione associata al progetto di traduzioni
 	/// </summary>
 	public String Description { get; set; }
 
@@ -23,7 +23,7 @@ public class PgtTranslationsSet
 	/// <summary>
 	/// Costruttore
 	/// </summary>
-	public PgtTranslationsSet()
+	public PgtTranslationProject()
 	{
 		this.Name = String.Empty;
 		this.Description = String.Empty;

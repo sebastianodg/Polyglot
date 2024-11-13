@@ -6,9 +6,14 @@
 public class PgtTranslationEntriesSet
 {
 	/// <summary>
-	/// Restituisce o imposta l'identificativo univoco del set di voci di traduzione
+	/// Restituisce o imposta il nome del set di voci di traduzione
 	/// </summary>
-	public String GroupId { get; set; }
+	public String Name { get; set; }
+
+	/// <summary>
+	/// Restituisce o imposta la descrizione del set di voci di traduzione
+	/// </summary>
+	public String Description { get; set; }
 
 	/// <summary>
 	/// Restituisce il riferimento al dizionario contenente l'elenco delle voci di traduzione
@@ -20,7 +25,8 @@ public class PgtTranslationEntriesSet
 	/// </summary>
 	public PgtTranslationEntriesSet()
 	{
-		this.GroupId = String.Empty;
+		this.Name = String.Empty;
+		this.Description = String.Empty;
 		this.Entries = new Dictionary<String, PgtTranslationEntry>();
 	}
 }

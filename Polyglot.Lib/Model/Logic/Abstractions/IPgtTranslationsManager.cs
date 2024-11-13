@@ -10,7 +10,29 @@ public interface IPgtTranslationsManager
 	/// <summary>
 	/// Restituisce un riferimento all'oggetto rappresentante l'intero set di traduzioni
 	/// </summary>
-	public PgtTranslationsSet Translations { get; }
+	public PgtTranslationProject TranslationsSet { get; }
 
-	void InitTranslations();
+	/// <summary>
+	/// Inizializza un set di traduzioni
+	/// </summary>
+	void InitTranslationsSet();
+
+	/// <summary>
+	/// Aggiunge un nuovo set di voci di traduzione
+	/// </summary>
+	/// <param name="name">Nome del set di voci di traduzione</param>
+	void AddTranslationsEntriesSet(String name);
+
+	/// <summary>
+	/// Rimuove un set di voci di traduzione
+	/// </summary>
+	/// <param name="name">Nome del set di voci di traduzione</param>
+	void RemoveTranslationsEntriesSet(String name);
+
+	/// <summary>
+	/// Cambia il nome di un set di voci di traduzione
+	/// </summary>
+	/// <param name="actualName">Nome attuale del set di voci di traduzione</param>
+	/// <param name="newName">Nuovo nome del set di voci di traduzione</param>
+	void RenameTranslationsEntriesSet(String actualName, String newName);
 }
