@@ -1,4 +1,4 @@
-﻿using Polyglot.Lib.Model;
+﻿using Polyglot.Lib.Model.Types;
 
 namespace Polyglot.Lib.Logic.Abstractions;
 

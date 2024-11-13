@@ -1,4 +1,4 @@
-﻿namespace Polyglot.Lib.Model;
+﻿namespace Polyglot.Lib.Model.Types;
 
 /// <summary>
 /// Classe rappresentante un set di voci di traduzione

@@ -1,4 +1,4 @@
-﻿namespace Polyglot.Lib.Model;
+﻿namespace Polyglot.Lib.Model.Types;
 
 /// <summary>
 /// Classe rappresentante una lingua contenente tutte le sue traduzioni

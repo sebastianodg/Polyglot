@@ -1,4 +1,4 @@
-﻿namespace Polyglot.Lib.Types;
+﻿namespace Polyglot.Lib.Archive.Types;
 
 /// <summary>
 /// Enumerazione dei tipi di archivio gestiti

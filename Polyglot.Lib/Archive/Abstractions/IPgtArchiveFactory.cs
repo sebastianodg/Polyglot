@@ -1,4 +1,4 @@
-﻿using Polyglot.Lib.Types;
+﻿using Polyglot.Lib.Archive.Types;
 
 namespace Polyglot.Lib.Archive.Abstractions;
 
