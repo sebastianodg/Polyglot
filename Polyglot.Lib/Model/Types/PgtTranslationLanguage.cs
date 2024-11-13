@@ -8,20 +8,42 @@ public class PgtTranslationLanguage
 	/// <summary>
 	/// Restituisce o imposta l'identificativo univoco della lingua
 	/// </summary>
-	public String LanguageId { get; set; }
+	public String Id { get; set; }
 
 	/// <summary>
-	/// Restituisce un riferimento al dizionario contenente tutti i set di traduzione contenuti nella lingua
+	/// Restituisce o imposta il nome della lingua
 	/// </summary>
-	public Dictionary<String, PgtTranslationEntriesSet> EntriesGroups { get; private set; }
+	public String Name { get; set; }
+
+	/// <summary>
+	/// Restituisce un riferimento al dizionario contenente tutti i gruppi di traduzione contenuti nella lingua
+	/// </summary>
+	public Dictionary<String, PgtTranslationEntriesGroup> EntriesGroups { get; private set; }
+
+	/// <summary>
+	/// Costruttore
+	/// </summary>
+	public PgtTranslationLanguage()
+	{
+		this.Id = String.Empty;
+		this.Name = String.Empty;
+		this.EntriesGroups = new Dictionary<String, PgtTranslationEntriesGroup>();
+	}
 
 	/// <summary>
 	/// Costruttore con inizializzazione
 	/// </summary>
-	/// <param name="languageId">Identificativo univoco della lingua</param>
-	public PgtTranslationLanguage(String languageId)
+	/// <param name="id">Identificativo univoco della lingua</param>
+	/// <param name="name">Nome della lingua</param>
+	public PgtTranslationLanguage(String id, String name)
 	{
-		this.LanguageId = languageId;
-		this.EntriesGroups = new Dictionary<String, PgtTranslationEntriesSet>();
+		if (String.IsNullOrEmpty(id))
+			throw new Exception($"{nameof(PgtTranslationLanguage)}.{nameof(PgtTranslationLanguage)}: Language ID cannot be null or empty.");
+		if (String.IsNullOrEmpty(name))
+			throw new Exception($"{nameof(PgtTranslationLanguage)}.{nameof(PgtTranslationLanguage)}: Language name cannot be null or empty.");
+
+		this.Id = id;
+		this.Name = name;
+		this.EntriesGroups = new Dictionary<String, PgtTranslationEntriesGroup>();
 	}
 }
