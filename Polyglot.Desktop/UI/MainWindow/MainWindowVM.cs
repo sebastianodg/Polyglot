@@ -19,9 +19,11 @@ public partial class MainWindowVM : ObservableObject
 		// Creazione dell'elenco delle voci che costituiscono il menù principale
 		this.MainMenuItems = new ObservableCollection<PgtMainMenuItem>()
 		{
-			new PgtMainMenuItem("\uE80F", "Home"),
-			new PgtMainMenuItem("\uF2B7", "Languages"),
-			new PgtMainMenuItem("\uE8F2", "Translations"),
+			new PgtMainMenuItem("home", "\uE80F", "Home"),
+			new PgtMainMenuItem("languages", "\uF2B7", "Languages"),
+			new PgtMainMenuItem("translations", "\uE8F2", "Translations"),
+			new PgtMainMenuItem("info", "\uE946", "Info"),
+			new PgtMainMenuItem("settings", "\uE713", "Settings"),
 		};
 	}
 }

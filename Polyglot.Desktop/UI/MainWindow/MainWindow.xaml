@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Polyglot.Desktop.UI.MainWindow"
-        mc:Ignorable="d"
+				mc:Ignorable="d"
 				Width="720"
 				Height="400"
 				WindowStartupLocation="CenterScreen"
@@ -49,27 +49,12 @@
 				<ColumnDefinition Width="3*"/>
 			</Grid.ColumnDefinitions>
 
-			<ListBox Grid.Column="0" ItemsSource="{Binding MainMenuItems}" ItemTemplate="{DynamicResource MainMenuItemDataTemplate}">
-			</ListBox>
+			<ListBox Grid.Column="0" ItemsSource="{Binding MainMenuItems}" ItemTemplate="{DynamicResource MainMenuItemDataTemplate}"
+							 SelectedIndex="0" SelectionChanged="MainMenuSelectionChanged"/>
 
-			<!--<StackPanel Grid.Column="0" Background="{DynamicResource LayerOnMicaBaseAltFillColorDefaultBrush}">
 
-				<StackPanel Orientation="Horizontal" Height="32">
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Text="&#xE80F;" Margin="16, 0, 0, 0"/>
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="Home" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
-				</StackPanel>
+			<Frame x:Name="_mainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
 
-				<StackPanel Orientation="Horizontal" Height="32">
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Text="&#xF2B7;" Margin="16, 0, 0, 0"/>
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="Languages" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
-				</StackPanel>
-
-				<StackPanel Orientation="Horizontal" Height="32">
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" FontFamily="Segoe Fluent Icons" VerticalAlignment="Center" Text="&#xE8F2;" Margin="16, 0, 0, 0"/>
-					<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="Translations" VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
-				</StackPanel>
-
-			</StackPanel>-->
 		</Grid>
 
 	</Grid>
