@@ -14,9 +14,9 @@
 		<!--#region DataTemplate per le voci di menù del ListBox di navigazione -->
 		<DataTemplate x:Key="MainMenuItemDataTemplate">
 			<StackPanel Orientation="Horizontal">
-				<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="{Binding MenuEntryIcon}"
+				<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="{Binding Icon}"
 									 VerticalAlignment="Center" Margin="16, 0, 0, 0" FontFamily="Segoe Fluent Icons"/>
-				<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="{Binding MenuEntryText}"
+				<TextBlock Style="{DynamicResource BodyStrongTextBlockStyle}" Text="{Binding Text}"
 									 VerticalAlignment="Center" Margin="8, 0, 0, 0"/>
 			</StackPanel>
 		</DataTemplate>
@@ -49,7 +49,7 @@
 				<ColumnDefinition Width="3*"/>
 			</Grid.ColumnDefinitions>
 
-			<ListBox Grid.Column="0">
+			<ListBox Grid.Column="0" ItemsSource="{Binding MainMenuItems}" ItemTemplate="{DynamicResource MainMenuItemDataTemplate}">
 			</ListBox>
 
 			<!--<StackPanel Grid.Column="0" Background="{DynamicResource LayerOnMicaBaseAltFillColorDefaultBrush}">
