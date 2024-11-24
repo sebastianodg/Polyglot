@@ -54,6 +54,13 @@ public interface IPgtProjectManager
 	void EditLanguage(String actualLanguageId, String newLanguageId, String newLanguageName);
 
 	/// <summary>
+	/// Controlla la presenza di un gruppo di voci di traduzione all'interno del progetto di traduzione
+	/// </summary>
+	/// <param name="entriesGroupId">Identificativo del gruppo di voci di traduzione</param>
+	/// <returns>True se il gruppo di voci di traduzione è presente nel progetto, altrimenti false</returns>
+	Boolean EntriesGroupExists(String entriesGroupId);
+
+	/// <summary>
 	/// Aggiunge un nuovo gruppo di voci di traduzione alle lingue
 	/// </summary>
 	/// <param name="groupName">Nome del gruppo</param>

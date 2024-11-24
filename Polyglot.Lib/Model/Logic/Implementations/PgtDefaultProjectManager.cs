@@ -114,7 +114,26 @@ internal class PgtDefaultProjectManager : IPgtProjectManager
 
 	public void EditLanguage(String actualLanguageId, String newLanguageId, String newLanguageName)
 	{
-		throw new NotImplementedException();
+		if (String.IsNullOrEmpty(actualLanguageId))
+			throw new Exception($"{nameof(PgtDefaultProjectManager)}.{nameof(EditLanguage)}: Actual language ID cannot be null or empty.");
+		if (!this._translationsProject.Languages.ContainsKey(actualLanguageId))
+			throw new Exception($"{nameof(PgtDefaultProjectManager)}.{nameof(EditLanguage)}: Language \"{actualLanguageId}\" was not found in project.");
+		if (String.IsNullOrEmpty(newLanguageId))
+			throw new Exception($"{nameof(PgtDefaultProjectManager)}.{nameof(EditLanguage)}: New language ID cannot be null or empty.");
+		if (String.IsNullOrEmpty(newLanguageName))
+			throw new Exception($"{nameof(PgtDefaultProjectManager)}.{nameof(EditLanguage)}: New language name cannot be null or empty.");
+
+		PgtTranslationLanguage actualLanguage = this._translationsProject.Languages[actualLanguageId];
+		actualLanguage.Id = newLanguageId;
+		actualLanguage.Name = newLanguageName;
+	}
+
+	public Boolean EntriesGroupExists(String entriesGroupId)
+	{
+		if (String.IsNullOrEmpty(entriesGroupId))
+			throw new Exception($"{nameof(PgtDefaultProjectManager)}.{nameof(EntriesGroupExists)}: Entries group ID cannot be null or empty.");
+
+		return this._translationsProject.Languages.Values.First().EntriesGroups.ContainsKey(entriesGroupId);
 	}
 
 	public void AddEntriesGroup(String groupName, String groupDescription)
